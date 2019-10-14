@@ -20,3 +20,9 @@ pip install .
 To run without distributed setup, do the usual AllenNLP installation and use experiments in `training_config/ data_parallel/`
 
 #### Comparison
+
+GPU - 2080 Ti
+
+| Experiment | Single GPU | 2x Data Parallel | 2x Distributed | 4x Data Parallel | 4x Distributed |
+|------------|------------|------------------|----------------|------------------|----------------|
+| esim.jsonnet (400K SNLI samples) | NA | NA | NA | 4m 30s | 2m 16s |  
