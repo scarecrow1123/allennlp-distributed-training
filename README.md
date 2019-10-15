@@ -23,6 +23,8 @@ To run without distributed setup, do the usual AllenNLP installation and use exp
 
 GPU - 2080 Ti
 
+NOTE: The time reported **does not** correspond to the `training_duration` metric. This is the time taken by the `Trainer._train_epoch` method.
+
 | Experiment | Single GPU | 2x Data Parallel | 2x Distributed | 4x Data Parallel | 4x Distributed |
 |------------|------------|------------------|----------------|------------------|----------------|
 | esim.jsonnet (400K SNLI samples) | 4m 40s | NA | NA | 4m 30s | 2m 16s |  
