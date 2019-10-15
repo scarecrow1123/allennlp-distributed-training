@@ -89,6 +89,7 @@ class SquadDistReader(DatasetReader):
 
                 for question_answer in paragraph_json['qas']:
                     if instance_count % world_size != rank:
+                        instance_count += 1
                         continue
 
                     question_text = question_answer["question"].strip().replace("\n", "")
