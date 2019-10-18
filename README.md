@@ -9,6 +9,7 @@ To run the distributed experiments install AllenNLP from [this fork @ https://gi
 
 ```bash
 conda create -n allennlp_distributed python=3.7
+conda activate allennlp_distributed
 git clone https://github.com/scarecrow1123/allennlp
 cd allennlp
 git checkout -b torch-distributed
