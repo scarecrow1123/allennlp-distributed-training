@@ -28,7 +28,7 @@
       "token_embedders": {
         "tokens": {
           "type": "embedding",
-          "pretrained_file": "https://allennlp.s3.amazonaws.com/datasets/glove/glove.6B.100d.txt.gz",
+          "pretrained_file": "./glove.6B.100d.txt.gz",
           "embedding_dim": 100,
           "trainable": false
         },
@@ -86,11 +86,13 @@
   },
 
   "trainer": {
+    "distributed": true,
     "num_epochs": 20,
     "grad_norm": 5.0,
     "patience": 10,
     "validation_metric": "+em",
     "cuda_device": [0, 1, 2, 3],
+    "num_serialized_models_to_keep": 2,
     "learning_rate_scheduler": {
       "type": "reduce_on_plateau",
       "factor": 0.5,

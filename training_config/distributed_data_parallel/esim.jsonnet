@@ -77,6 +77,7 @@
         "instances_per_epoch": 100000
     },
     "trainer": {
+        "distributed": true,
         "optimizer": {
             "type": "adam",
             "lr": 0.0004
