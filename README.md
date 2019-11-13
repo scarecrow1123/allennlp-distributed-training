@@ -12,7 +12,7 @@ conda create -n allennlp_distributed python=3.7
 conda activate allennlp_distributed
 git clone https://github.com/scarecrow1123/allennlp
 cd allennlp
-git checkout -b torch-distributed
+git checkout -b ddp-3 
 pip install .
 ```  
 
