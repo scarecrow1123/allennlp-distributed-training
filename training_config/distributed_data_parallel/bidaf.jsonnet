@@ -86,12 +86,10 @@
   },
 
   "trainer": {
-    "distributed": true,
     "num_epochs": 20,
     "grad_norm": 5.0,
     "patience": 10,
     "validation_metric": "+em",
-    "cuda_device": [0, 1, 2, 3],
     "num_serialized_models_to_keep": 2,
     "learning_rate_scheduler": {
       "type": "reduce_on_plateau",
@@ -103,5 +101,8 @@
       "type": "adam",
       "betas": [0.9, 0.9]
     }
+  },
+  "distributed": {
+    "cuda_devices": [0, 1, 2, 3]
   }
 }
