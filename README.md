@@ -1,6 +1,6 @@
 # allennlp-distributed-training
 
-This repo holds code/config for running example AllenNLP experiments with `DistributedDataParallel` support.
+This repo holds a few example AllenNLP experiments modified to run with `DistributedDataParallel` support.
 The `training_config` directory has two versions of the same set of experiments. The ones in `distributed_data_parallel` 
 directory mostly differs with the dataset readers. The dataset readers are replicas of the original ones in AllenNLP, 
 with a minor modification to support distributed sampling.
