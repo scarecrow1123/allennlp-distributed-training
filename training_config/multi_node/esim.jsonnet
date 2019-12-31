@@ -77,10 +77,6 @@
         "instances_per_epoch": 100000
     },
     "trainer": {
-        "distributed": true,
-        "num_nodes": 2,
-        "master_address": "127.0.0.0",
-        "master_port": 29500,
         "optimizer": {
             "type": "adam",
             "lr": 0.0004
@@ -90,12 +86,17 @@
         "num_epochs": 75,
         "grad_norm": 10.0,
         "patience": 5,
-        "cuda_device": [0, 1, 2, 3],
         "learning_rate_scheduler": {
             "type": "reduce_on_plateau",
             "factor": 0.5,
             "mode": "max",
             "patience": 0
         }
+    },
+    "distributed": {
+        "cuda_devices": [0, 1, 2, 3],
+        "num_nodes": 2,
+        "master_address": "127.0.0.0",
+        "master_port": 29500,
     }
 }
