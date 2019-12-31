@@ -63,14 +63,15 @@
   },
 
   "trainer": {
-    "distributed": true,
     "num_epochs": 140,
     "patience": 20,
-    "cuda_device": [0, 1, 2, 3],
     "grad_clipping": 5.0,
     "validation_metric": "+accuracy",
     "optimizer": {
       "type": "adagrad"
     }
+  },
+  "distributed": {
+    "cuda_devices": [0, 1, 2, 3]
   }
 }
